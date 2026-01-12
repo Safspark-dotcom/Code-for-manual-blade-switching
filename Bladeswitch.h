@@ -31,21 +31,17 @@ const unsigned int maxLedsPerStrip = 144;
 
 Preset presets[] = {
 { "font0;common",  "font0/tracks/track.wav",
+//BLADE
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
-
+//MOTOR
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
-
 "preset0"
 },
-
-};
-
-Preset presets2[] = {
-{ "font0;common",  "font0/tracks/track.wav",
+{ "font1;common",  "font0/tracks/track.wav",
+//BLADE
+StyleNormalPtr<RED, WHITE, 300, 800>(),
+//MOTOR
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
-
-StyleNormalPtr<CYAN, WHITE, 300, 800>(),
-
 "preset0"
 },
 
@@ -53,9 +49,25 @@ StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 
 Preset presets1[] = {
 { "font0;common",  "font0/tracks/track.wav",
+//BLADE
+StyleNormalPtr<CYAN, WHITE, 300, 800>(),
+//MOTOR
+"preset0"
+},
+{ "font1;common",  "font0/tracks/track.wav",
+//BLADE
+StyleNormalPtr<RED, WHITE, 300, 800>(),
+//MOTOR
+"preset0"
+},
+
+
+};
+
+Preset presets2[] = {
+{ "font0;common",  "font0/tracks/track.wav",
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 
-StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 
 "preset0"
 },
