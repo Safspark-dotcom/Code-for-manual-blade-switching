@@ -89,21 +89,21 @@ BladeConfig blades[] = {
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
-SimpleBladePtr<CreeXPE2WhiteTemplate<550>, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
+SimpleBladePtr<CH1LED, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
 CONFIGARRAY(presets) },
 
 { 2, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
-SimpleBladePtr<CreeXPE2WhiteTemplate<550>, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
+SimpleBladePtr<CH1LED, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(),
 CONFIGARRAY(presets1) },
 
 { 3, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
-SimpleBladePtr<CreeXPE2WhiteTemplate<550>, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
+SimpleBladePtr<CH1LED, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
 CONFIGARRAY(presets2), "nb_save" },
 
 };
