@@ -16,10 +16,15 @@ const unsigned int maxLedsPerStrip = 144;
 #define DISABLE_BASIC_PARSER_STYLES
 #define DISABLE_DIAGNOSTIC_COMMANDS
 #define SHARED_POWER_PINS
-#define SAVE_PRESET
+
 #define NO_REPEAT_RANDOM
 #define COLOR_CHANGE_DIRECT
 #define BLADE_DETECT_PIN blade4Pin
+
+#define FETT263_MANUAL_BLADE_ARRAY
+#define SAVE_STATE
+#define SAVE_PRESET
+
 #endif
 
 #ifdef CONFIG_PROP
@@ -30,14 +35,14 @@ const unsigned int maxLedsPerStrip = 144;
 #ifdef CONFIG_PRESETS
 
 Preset presets[] = {
-{ "font0;common",  "font0/tracks/track.wav",
+{ "VADER;common",  "tracks/track.wav",
 //BLADE
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 //MOTOR
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 "preset0"
 },
-{ "font1;common",  "font0/tracks/track.wav",
+{ "ANH;common",  "tracks/track.wav",
 //BLADE
 StyleNormalPtr<RED, WHITE, 300, 800>(),
 //MOTOR
@@ -48,53 +53,58 @@ StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 };
 
 Preset presets1[] = {
-{ "font0;common",  "font0/tracks/track.wav",
+{ "QUIGON;common",  "tracks/track.wav",
 //BLADE
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 //MOTOR
 "preset0"
 },
-{ "font1;common",  "font0/tracks/track.wav",
+{ "ANH;common",  "tracks/track.wav",
 //BLADE
 StyleNormalPtr<RED, WHITE, 300, 800>(),
 //MOTOR
-"preset0"
+
 },
 
 
 };
 
 Preset presets2[] = {
-{ "font0;common",  "font0/tracks/track.wav",
+{ "OBI;common",  "tracks/track.wav",
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 
+},
 
-"preset0"
+{ "ANH;common",  "tracks/track.wav",
+//BLADE
+StyleNormalPtr<CYAN, WHITE, 300, 800>(),
+//MOTOR
+
 },
 
 };
 
 BladeConfig blades[] = {
-{ 0, 
+{ 1, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
 SimpleBladePtr<CreeXPE2WhiteTemplate<550>, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
 CONFIGARRAY(presets) },
 
-{ 1, 
+{ 2, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
 SimpleBladePtr<CreeXPE2WhiteTemplate<550>, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
 CONFIGARRAY(presets1) },
 
-{ 2, 
+{ 3, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
 SimpleBladePtr<CreeXPE2WhiteTemplate<550>, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
-CONFIGARRAY(presets2) },
+CONFIGARRAY(presets2), "nb_save" },
 
 };
 #endif
