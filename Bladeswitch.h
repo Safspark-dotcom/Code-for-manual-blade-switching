@@ -57,13 +57,14 @@ Preset presets1[] = {
 //BLADE
 StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 //MOTOR
+StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 "preset0"
 },
 { "ANH;common",  "tracks/track.wav",
 //BLADE
 StyleNormalPtr<RED, WHITE, 300, 800>(),
 //MOTOR
-
+StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 },
 
 
@@ -85,26 +86,26 @@ StyleNormalPtr<CYAN, WHITE, 300, 800>(),
 };
 
 BladeConfig blades[] = {
-{ 1, 
+{ NO_BLADE, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
 SimpleBladePtr<CH1LED, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
-CONFIGARRAY(presets) },
+CONFIGARRAY(presets), "nb_save"  },
 
-{ 2, 
+{ NO_BLADE+1, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
 SimpleBladePtr<CH1LED, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(),
-CONFIGARRAY(presets1) },
+CONFIGARRAY(presets1), "nb_save"  },
 
-{ 3, 
+{ 0, 
 //BLADE
 WS281XBladePtr<132, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(), 
 //MOTOR
 SimpleBladePtr<CH1LED, NoLED, NoLED, NoLED, bladePowerPin1, -1, -1, -1>(), 
-CONFIGARRAY(presets2), "nb_save" },
+CONFIGARRAY(presets2)},
 
 };
 #endif
